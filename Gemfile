@@ -8,6 +8,7 @@ gem 'rails', '3.2.12'
 gem 'pg'
 
 group :development, :test do
+  gem 'rspec'
   gem 'rspec-rails'
 end
 
