@@ -1,0 +1,133 @@
+/*  Global  */
+
+/*limited reset*/
+html, body, div, section, article, aside, header, hgroup, footer, nav, h1, h2, h3, h4, h5, h6, p, blockquote, address, time, span, em, strong, img, ol, ul, li, figure, canvas, video, th, td, tr {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align:baseline;
+    font: inherit;
+}
+
+/*  html5 display rule  */
+address, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, nav, menu, nav, section, summary {
+    display: block;
+}
+
+html {
+    margin:0;
+    padding:0;
+}
+
+body {
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    position: relative;
+    font-weight: normal;
+    font-style: normal;
+    width: 100%;
+    margin: 0 auto;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+
+/*  Clear Fix  */
+/* Add 'group' class in the parent element.
+Children will automatically be cleard */
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+
+.group:after {
+  clear: both;
+}
+
+.group {
+  zoom: 1; /* IE6&7 */
+}
+
+
+
+/*  Typography  */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.7em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #999;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+
+
+/*  Main Content  */
+.container {
+    width: 80%;
+    margin: 0 auto;
+
+}
+
+/*  Header  */
+header {
+    width: 100%;
+    height: 100px;
+    background-color: grey;
+}
+
+
+/*  Sidebar  */
+aside {
+    float: left;
+    width: 15%;
+    height: 200px;
+    background-color: blue;
+
+    img {
+        display: block;
+        margin: 20px auto;
+    }
+
+    #navbar {
+        text-align: center;
+    }
+}
+
+
+/*  Article  */
+#article_container {
+    float: right;
+    background-color: red;
+    width: 85%;
+
+    article {
+        padding: 25px 4%;
+    }
+}

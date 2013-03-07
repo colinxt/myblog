@@ -8,17 +8,23 @@
   <%= render 'layouts/shim' %>
 </head>
 <body>
-<!-- Add a nav inside a header 
-<%= render 'layouts/header' %>
--->
 
-<!-- Add a sidebar 
-<%= render 'layouts/sidebar' %>
--->
+    <div class="container group">
+        <header>
+            <%= render 'layouts/header' %>
+        </header>
 
-<div class="container">
-    <%= yield %>
-</div>
+        <aside class="group">
+            <%= render 'layouts/sidebar' %>
+        </aside>
+
+        <section id="article_container" class="group">
+            <article>
+                <%= yield %>
+            </article>
+        </section>
+
+    </div>
 
 </body>
 </html>
