@@ -1,3 +1,10 @@
+@import "article";
+@import "clearfix";
+@import "fonts";
+@import "header";
+@import "sidebar";
+
+
 /*  Global  */
 
 /*limited reset*/
@@ -20,12 +27,15 @@ html {
 }
 
 body {
-    font-family: Georgia, Times, 'Times New Roman', serif;
+    font-family: 'KreonRegular', Georgia, Helvetica, sans-serif;
     position: relative;
     font-weight: normal;
     font-style: normal;
+    color: #282828;
     width: 100%;
     margin: 0 auto;
+    background: url(gray_jean.png);
+    text-shadow: 1px 1px white;
 }
 
 ul {
@@ -37,27 +47,9 @@ a {
     
     &:hover {
         text-decoration: underline;
+        color: #F90;
     }
 }
-
-
-/*  Clear Fix  */
-/* Add 'group' class in the parent element.
-Children will automatically be cleard */
-.group:before,
-.group:after {
-  content: "";
-  display: table;
-}
-
-.group:after {
-  clear: both;
-}
-
-.group {
-  zoom: 1; /* IE6&7 */
-}
-
 
 
 /*  Typography  */
@@ -67,9 +59,10 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 3em;
-  letter-spacing: -2px;
+  font-weight: 300;
   margin-bottom: 30px;
   text-align: center;
+  font-family: 'OpenSansLight', 'Times New Roman', serif;
 }
 
 h2 {
@@ -78,12 +71,11 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: #999;
 }
 
 p {
-  font-size: 1.1em;
-  line-height: 1.7em;
+  line-height: 1.5em;
+  text-shadow: 1px 1px white, -1px -1px rgba(210,210,210,.6);
 }
 
 
@@ -92,42 +84,11 @@ p {
 .container {
     width: 80%;
     margin: 0 auto;
-
-}
-
-/*  Header  */
-header {
-    width: 100%;
-    height: 100px;
-    background-color: grey;
 }
 
 
-/*  Sidebar  */
-aside {
-    float: left;
-    width: 15%;
-    height: 200px;
-    background-color: blue;
-
-    img {
-        display: block;
-        margin: 20px auto;
-    }
-
-    #navbar {
-        text-align: center;
-    }
-}
 
 
-/*  Article  */
-#article_container {
-    float: right;
-    background-color: red;
-    width: 85%;
 
-    article {
-        padding: 25px 4%;
-    }
-}
+
+
