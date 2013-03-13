@@ -1,9 +1,8 @@
 /*  Sidebar  */
 aside {
     float: left;
-    width: 15%;
-    height: 200px;
-    // background-color: #517798;
+    width: 160px;
+    background-color: rgba(255,255,255,.3);
 
     img {
         display: block;
@@ -12,5 +11,10 @@ aside {
 
     #navbar {
         text-align: center;
+        margin: 20px 0;
+
+        #shortcut {
+            margin-top: 30px;
+        }
     }
 }

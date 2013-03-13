@@ -1,10 +1,10 @@
 /*  Article  */
 #article_container {
-    float: right;
-    // background-color: #A2BDA2;
-    width: 85%;
+    float: left;
+    width: 800px;
+    border-top: 1px solid black;
 
     article {
-        padding: 25px 4%;
+        padding: 0 10% 25px;
     }
 }

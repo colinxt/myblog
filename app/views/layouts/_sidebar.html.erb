@@ -1,7 +1,17 @@
-<img src="#" height="100px" width="100px"/>
-<nav id="navbar">
-    <ul>
-        <li><%= link_to "Home", root_path %></li>
-        <li>About Me</li>
-    </ul>
-</nav>
+<aside class="group">
+    <img src="#" height="100px" width="100px"/>
+    <nav id="navbar">
+        <ul>
+            <li><%= link_to "Home", root_path %></li>
+            <li><%= link_to "About Me", about_path %></li>
+            <% if signed_in? %>
+                <div id="shortcut">
+                    <li><%= link_to "New Post", '#' %></li>
+                    <li><%= link_to "Edit Post", '#' %></li>
+                    <li><%= link_to "Sign Out", chulai_path, method: "delete" %></li>
+                    <p><%= @current_user.name %> </p>
+                </div>
+            <% end %>
+        </ul>
+    </nav>
+</aside>
