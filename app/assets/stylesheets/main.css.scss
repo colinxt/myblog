@@ -17,7 +17,7 @@ html, body, div, section, article, aside, header, hgroup, footer, nav, h1, h2, h
 }
 
 /*  html5 display rule  */
-address, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, nav, menu, nav, section, summary {
+address, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, nav, menu, section, summary {
     display: block;
 }
 
@@ -44,6 +44,7 @@ ul {
 
 a {
     text-decoration: none;
+    color: #282828;
     
     &:hover {
         text-decoration: underline;
@@ -78,10 +79,18 @@ p {
   text-shadow: 1px 1px white, -1px -1px rgba(210,210,210,.6);
 }
 
+.btn-submit {
+  float: left;
+  margin: 10px 0;
+}
+
+.field {
+  display: block;
+}
 
 /*  Main Content  */
 .container {
-    width: 80%;
+    width: 960px;
     margin: 0 auto;
 }
 
