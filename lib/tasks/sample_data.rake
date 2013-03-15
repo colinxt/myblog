@@ -6,7 +6,7 @@ namespace :db do
 end
 
 def make_posts
-  5.times do
+  30.times do
     title = "test"
     content = Faker::Lorem.paragraphs(paragraph_count=3)
     public = true
