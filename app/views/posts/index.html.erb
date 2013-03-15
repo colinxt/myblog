@@ -1,0 +1,7 @@
+<article class="post">
+    <%= @posts.each do |post| %>
+        <h1><%= post.title %></h1>
+        <h2><%= post.public %></h2>
+        <p><%= post.content %></p>
+    <% end %>
+</article>

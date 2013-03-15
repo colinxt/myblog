@@ -2,7 +2,7 @@ Myblog::Application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   resources :posts
 
-  root to: 'static_pages#about'
+  root to: 'static_pages#home'
 
   get "static_pages/about"
   match '/about', to: 'static_pages#about'
