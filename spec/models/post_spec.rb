@@ -26,4 +26,16 @@ describe Post do
     it { should_not be_valid }
   end
 
+  describe "post order" do
+    let!(:older_post) do
+      FactoryGirl.create(:post, created_at: 1.day.ago)
+    end
+    let!(:newer_post) do
+      FactoryGirl.create(:post, created_at: 1.hour.ago)
+    end
+
+    it "should have the right order" do
+      Post.all.should == [newer_post, older_post]
+    end
+  end
 end
