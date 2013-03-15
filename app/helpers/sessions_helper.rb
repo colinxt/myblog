@@ -10,6 +10,12 @@ module SessionsHelper
     !current_user.nil?
   end
 
+  def signed_in_user
+    unless signed_in?
+      redirect_to root_path
+    end
+  end
+
   # To define the "method", self.current_user = user
   def current_user=(user)
     @current_user = user
