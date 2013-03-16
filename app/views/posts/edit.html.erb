@@ -1,0 +1,15 @@
+<%= form_for @post do |f| %>
+    <div class="field">
+      <%= f.text_field :title %>
+    </div>
+
+    <div class="field">
+        <%= f.text_area :content, placeholder: "new post here..." %>
+    </div>
+
+    <div class="field">
+        <%= f.select :public, [['Public', true], ['Private', false]] %>
+    </div>
+
+    <%= f.submit "Post", class: "btn" %>
+<% end %>

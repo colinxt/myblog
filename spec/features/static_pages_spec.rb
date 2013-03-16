@@ -12,20 +12,21 @@ describe "StaticPages" do
   end
 
   describe "Home page" do
-    describe "pagination" do
-      before(:all) { 30.times { Post.create(title:"test pagination",
-                                            content:"test",
-                                            public: true)}}
-      after(:all) { Post.delete_all }
+    # describe "pagination" do
 
-      it { should have_selector('div.pagination') }
+    #   before(:all) { 30.times { Post.create(title:"test pagination",
+    #                                         content:"test",
+    #                                         public: true)}}
+    #   after(:all) { Post.delete_all }
 
-      it "should list each post" do
-        Post.paginate(page: 1).each do |post|
-          page.should have_selector('p', text: "test")
-        end
-      end
-    end
+    #   it { should have_selector('div.pagination') }
+    #   it "should list each post" do
+    #     Post.paginate(page: 1).each do |post|
+    #       page.should have_selector('h1', text: "test pagination")
+    #     end
+    #   end
+    # end
   end
+  
 
 end

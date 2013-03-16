@@ -4,9 +4,7 @@ Myblog::Application.routes.draw do
 
   root to: 'static_pages#home'
 
-  get "static_pages/about"
   match '/about', to: 'static_pages#about'
-
   match '/jinqu', to: 'sessions#new'
   match '/chulai', to: 'sessions#destroy', via: :delete
 end
