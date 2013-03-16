@@ -8,8 +8,9 @@ module ApplicationHelper
                    auto_link: true,
                    strikethrough: true }
     # renderer = PygmentizeHTML.new(options)
-    renderer = Redcarpet::Render::HTML.new(options)
-    markdown = Redcarpet::Markdown.new(renderer, extensions)
+    # renderer = Redcarpet::Render::HTML.new(options)
+    coderayified = CodeRayify.new(options)
+    markdown = Redcarpet::Markdown.new(coderayified, extensions)
     markdown.render(text).html_safe
   end
 
@@ -18,4 +19,10 @@ module ApplicationHelper
   #     Pygmentize.process(code, language)
   #   end
   # end
+
+  class CodeRayify < Redcarpet::Render::HTML
+    def block_code(code, language)
+      CodeRay.scan(code, language).div(line_numbers: :table)
+    end
+  end
 end
