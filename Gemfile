@@ -4,6 +4,9 @@ gem 'rails', '3.2.12'
 gem 'pg'
 gem 'redcarpet'
 gem 'will_paginate'
+gem 'redcarpet'
+gem 'pygments.rb'
+gem 'pygmentize'
 
 group :development, :test do
   gem 'rspec'
