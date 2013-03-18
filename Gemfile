@@ -12,7 +12,7 @@ gem 'coderay'
 group :development, :test do
   gem 'rspec'
   gem 'rspec-rails'
-  gem 'faker'
+  gem 'faker' 
 end
 
 group :test do
