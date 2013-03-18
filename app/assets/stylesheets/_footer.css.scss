@@ -1,0 +1,16 @@
+footer {
+    width: 100%;
+    height: 60px;
+    background-color: #272822;
+    box-shadow: inset 0 6px 18px black;
+    text-shadow: none;
+
+    small {
+        color: grey;
+        font-style: italic;
+        word-spacing: .5em;
+        line-height: 60px;
+        margin-right: 7%;
+        float: right;
+    }
+}

@@ -5,7 +5,7 @@ gem 'pg'
 gem 'redcarpet'
 gem 'will_paginate'
 gem 'redcarpet'
-gem 'pygments.rb'
+# gem 'pygments.rb'
 # gem 'pygmentize'
 gem 'coderay'
 

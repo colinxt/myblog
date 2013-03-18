@@ -3,6 +3,7 @@
 @import "fonts";
 @import "header";
 @import "sidebar";
+@import "footer";
 
 
 /*  Global  */
@@ -91,7 +92,7 @@ p {
 /*  Main Content  */
 .container {
     width: 960px;
-    margin: 0 auto;
+    margin: 0 auto 20px;
 }
 
 .debug_dump {
@@ -109,8 +110,18 @@ p {
   border: 1px solid grey;
   background-color: rgba(230,230,230,.6);
   margin: 10px;
-  text-shadow: none !important;
+  text-shadow: none;
   pre {
     margin-left: 5px;
   }
+}
+
+.continue {
+  font-style: italic;
+}
+
+.pagination {
+  text-align: center;
+  margin-top: 15px;
+  word-spacing: .5em;
 }
