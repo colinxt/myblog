@@ -1,8 +1,8 @@
 <% @posts.each do |post| %>
     <article class="posts">
         <h2><%= link_to post.title, post_path(post) %></h1>
-        <h3><%= post.public %></h3>
-        <p><%= truncate markdown(post.content), length: 400, omission: " ......" %></p>
+        <h3><%= post.public %></h2>
+        <p><%= truncate strip_tags(markdown(post.content)), length: 400, omission: " ......" %></p>
         <span class="continue"><%= link_to "... Continue Reading ...", post_path(post) %></span>
     </article>
 <% end %>

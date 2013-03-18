@@ -46,3 +46,11 @@ test:
   username: myblog
   password: 951357
 
+
+# production:
+#   adapter: postgresql
+#   encoding: UTF8
+#   database: myblog_prod
+#   pool: 5
+#   username: myblog
+#   password: 951357

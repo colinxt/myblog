@@ -1,11 +1,14 @@
 class PostsController < ApplicationController
-  before_filter :signed_in_user, only: [:new, :create, :edit, :update, :destroy]
+  before_filter :signed_in_user, except: [:show]
 
   def index
   end
 
   def show
-    @post = Post.find(params[:id])
+    @post = Post.find(params[:id]) || not_found
+    if !@post.public && !signed_in?
+      not_found
+    end
   end
 
   def new
