@@ -1,8 +1,8 @@
 module ApplicationHelper
   def markdown(text)
     options = { filter_html: true,
-                auto_link: true,
-                with_toc_data: true }
+                with_toc_data: true,
+                hard_wrap: true }
     extensions = { no_intra_emphasis: true,
                    fenced_code_blocks: true,
                    auto_link: true,
