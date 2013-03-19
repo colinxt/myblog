@@ -1,9 +1,9 @@
-@import "article";
+// @import "article";
 @import "clearfix";
 @import "fonts";
-@import "header";
-@import "sidebar";
-@import "footer";
+// @import "header";
+// @import "sidebar";
+// @import "footer";
 
 
 /*  Global  */
@@ -25,17 +25,18 @@ address, article, aside, canvas, details, figcaption, figure, footer, header, hg
 html {
     margin:0;
     padding:0;
+    background: url(gray_jean.png);
+    height: 100%;
 }
 
 body {
     font-family: 'KreonRegular', Georgia, Helvetica, sans-serif;
-    position: relative;
     font-weight: normal;
     font-style: normal;
     color: #282828;
     width: 100%;
-    margin: 0 auto;
-    background: url(gray_jean.png);
+    height: 100%;
+    margin: 0 auto;  
     text-shadow: 1px 1px white;
 }
 
@@ -48,7 +49,7 @@ a {
     color: #282828;
     
     &:hover {
-        text-decoration: underline;
+        text-decoration: none;
         color: #F90;
     }
 }
@@ -62,7 +63,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 3.2em;
   font-weight: 400;
-  margin-bottom: 30px;
+  padding-bottom: 30px;
   text-align: center;
   font-family: 'OpenSansLight', 'Times New Roman', serif;
 }
@@ -70,7 +71,7 @@ h1 {
 h2 {
   font-size: 1.7em;
   letter-spacing: -1px;
-  margin-bottom: 30px;
+  padding-bottom: 30px;
   text-align: center;
   font-weight: normal;
 }
@@ -78,6 +79,12 @@ h2 {
 p {
   line-height: 1.5em;
   text-shadow: 1px 1px white, -1px -1px rgba(210,210,210,.6);
+}
+
+small {
+    color: grey;
+    font-style: italic;
+    word-spacing: .5em;
 }
 
 .btn-submit {
@@ -92,19 +99,10 @@ p {
 /*  Main Content  */
 .container {
     width: 960px;
-    margin: 0 auto 20px;
+    margin: 0 auto;
+    min-height: 100%;
 }
 
-.debug_dump {
-  width: 100%;
-  margin-top: 10px;
-  float: left;
-  border-top: 1px solid black;
-  padding-top: 20px;
-  -moz-box-sizing: border-box; 
-  -webkit-box-sizing: border-box; 
-  box-sizing: border-box;
-}
 
 .CodeRay {
   border: 1px solid grey;
@@ -118,10 +116,17 @@ p {
 
 .continue {
   font-style: italic;
+  font-size: .9em;
+  padding-top: 10px;
 }
 
 .pagination {
   text-align: center;
   margin-top: 15px;
   word-spacing: .5em;
+}
+
+.timeInfo {
+    padding-bottom: 15px;
+    text-align: right;
 }

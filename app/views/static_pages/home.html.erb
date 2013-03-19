@@ -1,9 +1,9 @@
 <% @posts.each do |post| %>
     <article class="posts">
         <h2><%= link_to post.title, post_path(post) %></h1>
-        <h3><%= post.public %></h2>
+        <small>Posted At: <%= post.created_at.strftime("%Y-%m-%d %H:%M") %></small>
         <p><%= truncate strip_tags(markdown(post.content)), length: 400, omission: " ......" %></p>
-        <span class="continue"><%= link_to "... Continue Reading ...", post_path(post) %></span>
+        <div class="continue"><%= link_to "... Continue Reading ...", post_path(post) %></span>
     </article>
 <% end %>
 
