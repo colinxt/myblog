@@ -3,17 +3,9 @@ class PostsController < ApplicationController
 
   def index
     if signed_in?
-      @posts = Post.where(lang: 'eng').paginate(page: params[:page], per_page: 5)
+      @posts = Post.where("lang = ?", params[:l]).paginate(page: params[:page], per_page: 5)
     else
-      @posts = Post.where(public: true, lang: 'eng').paginate(page: params[:page], per_page: 5)
-    end
-  end
-
-  def chinese
-    if signed_in?
-      @posts = Post.where(lang: 'chn').paginate(page: params[:page], per_page: 5)
-    else
-      @posts = Post.where(public: true, lang: 'chn').paginate(page: params[:page], per_page: 5)
+      @posts = Post.where("public = ? AND lang = ?", true, params[:l]).paginate(page: params[:page], per_page: 5)
     end
   end
 
