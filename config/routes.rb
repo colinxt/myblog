@@ -2,10 +2,10 @@ Myblog::Application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   resources :posts
 
-  root to: 'static_pages#home'
+  root to: 'posts#index'
 
   match '/about', to: 'static_pages#about'
   match '/jinqu', to: 'sessions#new'
   match '/chulai', to: 'sessions#destroy', via: :delete
-  match '/zh', to: 'static_pages#home'
+  match '/zh', to: 'posts#chinese'
 end
