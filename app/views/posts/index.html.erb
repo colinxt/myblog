@@ -1,7 +1,8 @@
 <article class="post">
     <%= @posts.each do |post| %>
         <h1><%= post.title %></h1>
-        <h2><%= post.public %></h2>
+        <h3><%= post.public %></h3>
+        <h3><%= post.lang %></h3>
         <p><%= post.content %></p>
     <% end %>
 </article>

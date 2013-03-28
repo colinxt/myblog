@@ -11,5 +11,9 @@
         <%= f.select :public, [['Public', true], ['Private', false]] %>
     </div>
 
+    <div class="field">
+        <%= f.select :lang, [['English', 'eng'], ['Chinese', 'chn']] %>
+    </div>
+    
     <%= f.submit "Post", class: "btn" %>
 <% end %>
