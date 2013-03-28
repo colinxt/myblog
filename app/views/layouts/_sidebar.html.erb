@@ -3,6 +3,7 @@
     <nav id="navbar">
         <ul>
             <li><%= link_to "Home", root_path %></li>
+            <li><%= link_to "ENG", root_path %>/<%= link_to "中文", '/zh' %></li>
             <li><%= link_to "About Me", about_path %></li>
             <% if signed_in? %>
                 <div id="shortcut">
