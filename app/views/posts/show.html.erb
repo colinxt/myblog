@@ -5,3 +5,10 @@
     </section>
     <p><%= markdown @post.content %></p>
 </article>
+
+<hr>
+
+<section id="comment">
+    <!-- <a class="moot" href="http://api.moot.it/panco/blog/#{}"></a> -->
+    <%= link_to "", "http://api.moot.it/panco/blog/" + @post.title, class: "moot" %>
+</section>
