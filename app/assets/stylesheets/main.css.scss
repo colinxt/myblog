@@ -61,7 +61,6 @@ a {
     color: #282828;
     
     &:hover {
-        text-decoration: none;
         color: #F90;
     }
 }
@@ -113,6 +112,12 @@ p {
   code {
     @include code-etc;
     padding: 0 4px;
+  }
+  a {
+      color: #F90;
+      &:hover {
+        text-decoration: underline;
+      }
   }
 }
 
