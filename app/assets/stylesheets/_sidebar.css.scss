@@ -1,7 +1,9 @@
 /*  Sidebar  */
 aside {
-    float: left;
-    width: 160px;
+    position: fixed;
+    top: 0;
+    right: 7%;
+    width: 120px;
     background-color: rgba(255,255,255,.4);
 
     ul {
@@ -17,10 +19,10 @@ aside {
 
     #navbar {
         text-align: center;
-        margin: 20px 0;
+        margin: 10px 0;
 
         #shortcut {
-            margin-top: 30px;
+            margin-top: 15px;
         }
     }
 }
