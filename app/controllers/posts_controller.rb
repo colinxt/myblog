@@ -1,11 +1,11 @@
 class PostsController < ApplicationController
-  before_filter :signed_in_user, except: [:index, :show, :chinese]
+  before_filter :signed_in_user, except: [:index, :show]
 
   def index
     if signed_in?
-      @posts = Post.where("lang = ?", params[:l]).paginate(page: params[:page], per_page: 5)
+      @posts = Post.paginate(page: params[:page], per_page: 5)
     else
-      @posts = Post.where("public = ? AND lang = ?", true, params[:l]).paginate(page: params[:page], per_page: 5)
+      @posts = Post.where("public = ?", true).paginate(page: params[:page], per_page: 5)
     end
   end
 
