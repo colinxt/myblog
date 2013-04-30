@@ -1,0 +1,21 @@
+<%= form_for @post do |post_form| %>
+    <div class="field">
+      <%= post_form.text_field :title %>
+    </div>
+
+    <div class="field">
+        <%= post_form.text_area :content, rows: 20, cols: 80 %>
+    </div>
+
+    <div class="field">
+        <%= post_form.select :public, [['Public', true], ['Private', false]] %>
+    </div>
+
+    <div class="field">
+        <%= post_form.select :lang, [['English', 'eng'], ['Chinese', 'chn']] %>
+    </div>
+
+    <%= render 'tags/form', locals: {form: post_form} %>
+
+    <%= post_form.submit "Post", class: "btn" %>
+<% end %>

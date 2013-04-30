@@ -4,6 +4,10 @@
         <small>Posted @ <%= @post.created_at.strftime("%Y-%m-%d %H:%M") %> / Updated @ <%= @post.updated_at.strftime("%Y-%m-%d %H:%M") %></small>
     </section>
     <p><%= markdown @post.content %></p>
+    <p>
+        <b>Tags:</b>
+        <%= @post.tags.map { |t| t.name }.join(", ") %>
+    </p>
 </article>
 
 <hr>
