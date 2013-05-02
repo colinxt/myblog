@@ -18,11 +18,13 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
+    @tags = @post.tags.build
   end
 
   def create
     @post = Post.new(params[:post])
-    if @post.save
+    @tags = @post.tags.new(params[:tags])
+    if @post.save && @tags.save
       redirect_to post_path(@post)
     else
       redirect_to root_url
@@ -31,6 +33,7 @@ class PostsController < ApplicationController
 
   def edit
     @post = Post.find(params[:id])
+    @tags = @post.tags
   end
 
   def update
