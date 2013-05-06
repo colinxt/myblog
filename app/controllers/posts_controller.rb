@@ -2,10 +2,14 @@ class PostsController < ApplicationController
   before_filter :signed_in_user, except: [:index, :show]
 
   def index
-    if signed_in?
-      @posts = Post.paginate(page: params[:page], per_page: 5)
+    if params[:tag]
+      @posts = Post.tagged_with(params[:tag])
     else
-      @posts = Post.where("public = ?", true).paginate(page: params[:page], per_page: 5)
+      if signed_in?
+        @posts = Post.paginate(page: params[:page], per_page: 5)
+      else
+        @posts = Post.where("public = ?", true).paginate(page: params[:page], per_page: 5)
+      end
     end
   end
 
@@ -23,8 +27,8 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(params[:post])
-    @tags = @post.tags.new(params[:tags])
-    if @post.save && @tags.save
+
+    if @post.save
       redirect_to post_path(@post)
     else
       redirect_to root_url

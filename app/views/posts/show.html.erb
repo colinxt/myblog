@@ -5,7 +5,7 @@
     </section>
     <p><%= markdown @post.content %></p>
     <div class="tag">
-        Tags: <%= @post.tags %>
+        Tags: <%= raw @post.tags.map { |t| link_to t.name, tag_path(t.name) }.join(', ') %>
     </div>
 </article>
 

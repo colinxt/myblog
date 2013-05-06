@@ -1,21 +1,24 @@
-<%= form_for @post do |post_form| %>
+<%= form_for @post do |f| %>
     <div class="field">
-      <%= post_form.text_field :title %>
+      <%= f.text_field :title %>
     </div>
 
     <div class="field">
-        <%= post_form.text_area :content, rows: 20, cols: 80 %>
+        <%= f.text_area :content, rows: 20, cols: 80 %>
     </div>
 
     <div class="field">
-        <%= post_form.select :public, [['Public', true], ['Private', false]] %>
+        <%= f.select :public, [['Public', true], ['Private', false]] %>
     </div>
 
     <div class="field">
-        <%= post_form.select :lang, [['English', 'eng'], ['Chinese', 'chn']] %>
+        <%= f.select :lang, [['English', 'eng'], ['Chinese', 'chn']] %>
     </div>
 
-    <%= render partial: 'tags/form', locals: {form: post_form} %>
+    <div class="field">
+        <%= f.label :tag_list, "Tags" %><br />
+        <%= f.text_field :tag_list %>
+    </div>
 
-    <%= post_form.submit "Post", class: "btn" %>
+    <%= f.submit "Post", class: "btn" %>
 <% end %>

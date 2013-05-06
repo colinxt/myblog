@@ -2,10 +2,11 @@
     <article class="posts">
         <h2><%= link_to post.title, post_path(post) %></h2>
         <small>Posted at <%= post.created_at.strftime("%Y-%m-%d %H:%M") %></small>
-        <small>Tags: </small>
         <p><%= truncate strip_tags(markdown(post.content)), length: 400, omission: " ......" %></p>
         <em class="continue"><%= link_to "... Continue Reading ...", post_path(post) %></em>
     </article>
 <% end %>
 
-<%= will_paginate @posts %>
+<% if @post %>
+    <%= will_paginate @posts %>
+<% end %>
