@@ -1,8 +1,10 @@
 Myblog::Application.routes.draw do
+
   resources :sessions, only: [:new, :create, :destroy]
   resources :posts
-  get 'tags/:tag', to: 'posts#index', as: :tag
 
+  resources :tags, :only => [:show]
+  
   root to: 'posts#index'
 
   match '/about', to: 'static_pages#about'
