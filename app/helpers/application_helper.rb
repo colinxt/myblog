@@ -25,4 +25,8 @@ module ApplicationHelper
   #     yield(tag, classes[index.round])
   #   end
   # end
+
+  def link_tags post
+    post.tags.map { |t| link_to t.name, tag_path(t.name) }.join(', ')
+  end
 end

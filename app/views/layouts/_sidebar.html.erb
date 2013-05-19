@@ -15,6 +15,11 @@
                     <li><%= link_to "Sign Out", chulai_path, method: "delete" %></li>
                 </div>
             <% end %>
+            <div id="tag-list">
+                <% Tag.all.each do |t| %>
+                    <li><%= link_to t.name, tag_path(t.name) %>(<%= t.posts.size %>)</li>
+                <% end %>
+            </div>
         </ul>
     </nav>
 
