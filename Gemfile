@@ -9,6 +9,9 @@ gem 'redcarpet'
 # gem 'pygmentize'
 gem 'coderay'
 
+#For Heroku
+gem 'unicorn'
+
 group :development, :test do
   gem 'rspec'
   gem 'rspec-rails'
