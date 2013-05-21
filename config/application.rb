@@ -67,5 +67,8 @@ module Myblog
 
     # Add fonts path
     config.assets.paths << "#{Rails.root}/app/assets/fonts"
+
+    #Force SSL connection
+    config.force_ssl = true
   end
 end
