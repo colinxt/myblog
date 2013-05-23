@@ -8,6 +8,7 @@ gem 'redcarpet'
 # gem 'pygments.rb'
 # gem 'pygmentize'
 gem 'coderay'
+gem 'thin'
 
 group :development, :test do
   gem 'rspec'
@@ -32,7 +33,7 @@ end
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
-gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby', '3.0.1'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
