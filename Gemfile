@@ -9,6 +9,7 @@ gem 'redcarpet'
 # gem 'pygmentize'
 gem 'coderay'
 gem 'thin'
+gem 'newrelic_rpm'
 
 group :development, :test do
   gem 'rspec'

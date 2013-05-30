@@ -74,6 +74,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.23)
     multi_json (1.7.3)
+    newrelic_rpm (3.6.2.96)
     nokogiri (1.5.9)
     nokogiri (1.5.9-x86-mingw32)
     pg (0.15.1)
@@ -160,6 +161,7 @@ DEPENDENCIES
   factory_girl_rails
   faker
   jquery-rails
+  newrelic_rpm
   pg
   rails (= 3.2.13)
   redcarpet
